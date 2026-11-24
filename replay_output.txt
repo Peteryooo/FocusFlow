@@ -1,0 +1,68 @@
+Scenario B: Monday morning, high energy
+  Mon 09:00  energy 5/5 -> Statistics assignment, 60 min
+      why: it is due Friday (in 4 days); its difficulty (5/5) suits your energy (5/5)
+
+Scenario A: evenings, user skips the hard task when it is suggested
+  Mon 21:00  energy 3/5 -> Statistics assignment, 40 min
+      why: it is due Friday (in 4 days); it is harder (5/5) than your energy (3/5), but its deadline and workload put it first
+      user: Not now
+  Mon 21:00  energy 3/5 -> Read HCI chapter 3, 40 min
+      why: it is due Sunday (in 6 days); its difficulty (2/5) suits your energy (3/5)
+      user: Start (0.83 h left on it)
+  Tue 21:00  energy 3/5 -> Statistics assignment, 40 min
+      why: it is due Friday (in 3 days); 4 h of work is left on it; it is harder (5/5) than your energy (3/5), but its deadline and workload put it first
+      user: Not now
+  Tue 21:00  energy 3/5 -> Read HCI chapter 3, 40 min
+      why: it is due Sunday (in 5 days); its difficulty (2/5) suits your energy (3/5)
+      user: Start (0.16 h left on it)
+  Wed 21:00  energy 3/5 -> Statistics assignment, 40 min
+      why: it is due Friday (in 2 days); 4 h of work is left on it; it is harder (5/5) than your energy (3/5), but its deadline and workload put it first; you often skip hard tasks in the evening, but this one is too urgent to move down
+      user: Not now
+  Wed 21:00  energy 3/5 -> Read HCI chapter 3, 10 min
+      why: it is due Sunday (in 4 days); its difficulty (2/5) suits your energy (3/5)
+      user: Start (0 h left on it)
+  Thu 21:00  energy 3/5 -> Statistics assignment, 40 min
+      why: it is due tomorrow; 4 h of work is left on it; it is harder (5/5) than your energy (3/5), but its deadline and workload put it first; you often skip hard tasks in the evening, but this one is too urgent to move down
+      user: Start (3.33 h left on it)
+  learned preferences: {'evening|hard': -0.12, 'evening|easy': 0.09}
+
+Scenario C: after an ill week, user resets learning, then exports
+  status before: Still learning your habits (7 of 10 choices recorded). For now, suggestions rely mostly on deadlines and your energy.
+  learned: ['Less likely to suggest hard tasks in the evening', 'More likely to suggest easy tasks in the evening']
+  user: Reset learning history -> Delete
+  status after: Still learning your habits (0 of 10 choices recorded). For now, suggestions rely mostly on deadlines and your energy.
+  user: switches 'Learn from my choices' off
+  Fri 10:00  energy 2/5 -> Statistics assignment, 25 min
+      why: it is due today; 3.33 h of work is left on it; it is harder (5/5) than your energy (2/5), but its deadline and workload put it first
+  user: Not now -> records kept: 0
+  export:
+    {
+      "exported": "2026-11-20T10:00",
+      "tasks": [
+        {
+          "name": "Statistics assignment",
+          "deadline": "2026-11-20",
+          "hours_left": 3.33,
+          "difficulty": 5
+        },
+        {
+          "name": "Read HCI chapter 3",
+          "deadline": "2026-11-22",
+          "hours_left": 0.0,
+          "difficulty": 2
+        },
+        {
+          "name": "Spanish vocabulary",
+          "deadline": "2026-11-25",
+          "hours_left": 1.0,
+          "difficulty": 1
+        }
+      ],
+      "learning_enabled": false,
+      "learned_preferences": [],
+      "choices_last_14_days": {
+        "accept": 0,
+        "skip": 0,
+        "change": 0
+      }
+    }
