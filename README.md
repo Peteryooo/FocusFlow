@@ -2,7 +2,7 @@
 
 A study helper that suggests which task to work on now and for how long, based on deadlines, work left, difficulty and how much energy the student has. It explains each suggestion and learns, carefully, from what the student skips or starts.
 
-Assignment 2 project. Submitted release: **`v1.0-a2`**. Prose word count of this README: **684 words** (code and commands not counted).
+Submitted release: **`v1.0-a2`**.
 
 ## Project status
 
